@@ -1,18 +1,27 @@
 <template>
-    <h1>{{ message }}</h1>
-    <HelloWorld />
+    <MyBtn>Banana</MyBtn>
+    <MyBtn 
+        :color="color">
+        <span style="color: red;">Banana</span>
+    </MyBtn>
+    <MyBtn 
+        large
+        color="royalblue">
+        Apple</MyBtn>
+    <MyBtn>Cherry</MyBtn>
+    <button>Banana</button>
 </template>
 
 <script>
-import HelloWorld from '~/components/HelloWorld'
+import MyBtn from '~/components/MyBtn'
 
 export default {
     components: {
-        HelloWorld
+        MyBtn
     },
     data() {
         return {
-            message: 'Hello Vue!!!'
+            color: '#000'
         }
     }
 }
